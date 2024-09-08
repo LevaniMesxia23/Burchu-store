@@ -1,7 +1,7 @@
 {
   "product": [{
     "id" : 1,
-    "name": "Messi T-shirt",
+    "name": "Messi T-shirt.",
     "image" : "../public/images/messiImg.jpg",
     "size" : "m",
     "cost" : 79,
@@ -9,7 +9,7 @@
   },
   {
     "id" : 2,
-    "name": "Cristiano T-shirt",
+    "name": "Cristiano T-shirt.",
     "image" : "../public/images/ronaldoImg.jpg",
     "size" : "m",
     "cost" : 79,

@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Products from "./components/products"
 
@@ -8,6 +9,7 @@ function App() {
     <>
      <Header />
      <Products />
+     <Footer/>
     </>
   )
 }
