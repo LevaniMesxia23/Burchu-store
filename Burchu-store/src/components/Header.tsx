@@ -1,5 +1,4 @@
-import React from 'react'
-import hamburger from "../../public/images/interface.png"
+import hamburger from "../../public/images/icon-hamburger.svg"
 import logo from "../../public/images/logo.jpg"
 import search from "../../public/images/search.png"
 
@@ -11,6 +10,7 @@ function Header() {
         <img src={logo} alt="" />
         <img src={search} alt="" className='w-8 h-8'/>
       </div>
+      <div className=' h-1 bg-white'></div>
     </div>
   )
 }
