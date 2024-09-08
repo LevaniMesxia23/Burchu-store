@@ -10,7 +10,7 @@ function Header() {
         <img src={logo} alt="" />
         <img src={search} alt="" className='w-8 h-8'/>
       </div>
-      <div className=' h-1 bg-white'></div>
+      <div className=' h-[1px] bg-grey'></div>
     </div>
   )
 }

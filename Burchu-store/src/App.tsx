@@ -1,4 +1,5 @@
 import Header from "./components/Header"
+import Products from "./components/products"
 
 function App() {
 
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
      <Header />
+     <Products />
     </>
   )
 }
