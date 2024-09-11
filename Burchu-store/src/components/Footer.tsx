@@ -23,14 +23,14 @@ export default function Footer() {
           </ol>
         </div>
 
-    <div className=' flex items-end'>
+    <div className=' flex items-end gap-4 flex-wrap'>
 
         <div>
-          <p className=' text-orange-200 mb-4 tracking-widest text-[2rem] mt-16'><b>SOCIALS</b></p>
-          <a href="https://www.instagram.com/burchu.14/"><img src={instagram} alt="Instagram" className='w-12 h-12'/></a>
+          <p className=' text-orange-200 mb-4 tracking-widest text-[2rem] mt-4'><b>SOCIALS</b></p>
+          <a target='_blank' href="https://www.instagram.com/burchu.14/"><img src={instagram} alt="Instagram" className='w-12 h-12'/></a>
         </div>
-      <div className=' px-16 pt-4 flex flex-col gap-4'>
-        <p className=' text-orange-200 mb-1 tracking-widest text-[2rem] mt-16 '><b>LANGUAGE</b></p>
+      <div className='  md:px-16 pt-4 flex flex-col gap-4'>
+        <p className=' text-orange-200 mb-1 tracking-widest text-[2rem] mt-4 '><b>LANGUAGE</b></p>
         <div className=' bg-white border p-2  w-[10rem] flex items-center justify-between rounded-sm'>
           <span className='text-black'>ENGLISH</span>
           <img src={downArrow} alt="" className=' w-4 h-4'/>
