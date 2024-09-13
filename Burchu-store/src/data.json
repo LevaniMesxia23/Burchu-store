@@ -2,7 +2,7 @@
   "product": [{
     "id" : 1,
     "name": "Messi T-shirt.",
-    "image" : "../public/images/messiImg.jpg",
+    "image" : "../public/images/messiImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -10,7 +10,7 @@
   {
     "id" : 2,
     "name": "Cristiano T-shirt.",
-    "image" : "../public/images/ronaldoImg.jpg",
+    "image" : "../public/images/ronaldoImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -18,7 +18,7 @@
   {
     "id" : 1,
     "name": "Messi T-shirt.",
-    "image" : "../public/images/messiImg.jpg",
+    "image" : "../public/images/messiImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -26,7 +26,7 @@
   {
     "id" : 2,
     "name": "Cristiano T-shirt.",
-    "image" : "../public/images/ronaldoImg.jpg",
+    "image" : "../public/images/ronaldoImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -34,7 +34,7 @@
   {
     "id" : 1,
     "name": "Messi T-shirt.",
-    "image" : "../public/images/messiImg.jpg",
+    "image" : "../public/images/messiImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -42,7 +42,7 @@
   {
     "id" : 2,
     "name": "Cristiano T-shirt.",
-    "image" : "../public/images/ronaldoImg.jpg",
+    "image" : "../public/images/ronaldoImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -50,7 +50,7 @@
   {
     "id" : 1,
     "name": "Messi T-shirt.",
-    "image" : "../public/images/messiImg.jpg",
+    "image" : "../public/images/messiImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -58,7 +58,7 @@
   {
     "id" : 2,
     "name": "Cristiano T-shirt.",
-    "image" : "../public/images/ronaldoImg.jpg",
+    "image" : "../public/images/ronaldoImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -66,7 +66,7 @@
   {
     "id" : 1,
     "name": "Messi T-shirt.",
-    "image" : "../public/images/messiImg.jpg",
+    "image" : "../public/images/messiImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
@@ -74,7 +74,7 @@
   {
     "id" : 2,
     "name": "Cristiano T-shirt.",
-    "image" : "../public/images/ronaldoImg.jpg",
+    "image" : "../public/images/ronaldoImg.png",
     "size" : "m",
     "cost" : 79,
     "quantity": 10
