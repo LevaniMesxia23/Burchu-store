@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import logo from "../../public/images/logo.jpg";
 import search from "../../public/images/search.png";
 import { Mycontext } from "../App";
@@ -14,6 +15,20 @@ function Header() {
   const handleBurger = () => {
     setBurgerClicked(!burgerClicked);
   };
+
+  const handleLinkClick = () => {
+    if (burgerClicked) {
+      setBurgerClicked(false);
+    }
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = burgerClicked ? 'hidden' : 'auto';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [burgerClicked]);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -42,9 +57,9 @@ function Header() {
             <ul className="flex flex-col mt-16 space-y-4 md:mt-0 md:flex-row md:space-y-0 md:space-x-4">
               {navLinks.map((link) => (
                 <li key={link.name} className="pl-2 pt-6 text-[0.9rem] font-bold ">
-                  <a href={link.path} className="hover:underline">
+                  <Link to={link.path} className="hover:underline" onClick={handleLinkClick}>
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -57,16 +72,16 @@ function Header() {
 
       {!isTablet && (
         <nav
-          className={`fixed top-279 left-0 h-full w-[60%] bg-black text-white transition-transform duration-300 ease-in-out ${
+          className={`fixed top-279 left-0 h-full w-full bg-black text-white transition-transform duration-300 ease-in-out ${
             burgerClicked ? "translate-x-0" : "-translate-x-full"
           } md:relative md:translate-x-0 md:flex md:items-center md:w-auto`}
         >
           <ul className="flex flex-col mt-16 space-y-4 md:mt-0 md:flex-row md:space-y-0 md:space-x-4">
             {navLinks.map((link) => (
               <li key={link.name} className="pl-10 pt-6 text-[1.8rem] font-bold ">
-                <a href={link.path} className="hover:underline">
+                <Link to={link.path} className="hover:underline" onClick={handleLinkClick}>
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -2,6 +2,7 @@
   "dependencies": {
     "@custom-react-hooks/all": "^1.5.1",
     "hamburger-react": "^2.5.1",
-    "react-responsive": "^10.0.0"
+    "react-responsive": "^10.0.0",
+    "react-router-dom": "^6.26.2"
   }
 }
