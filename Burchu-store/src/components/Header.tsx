@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import logo from "../../public/images/logo.jpg";
-import search from "../../public/images/search.png";
+import downArrow from "../../public/images/down-arrow.png";
 import { Mycontext } from "../App";
 import { Fade as Hamburger } from 'hamburger-react';
 
@@ -54,7 +54,7 @@ function Header() {
               burgerClicked ? "translate-x-0" : "-translate-x-full"
             } md:relative md:translate-x-0 md:flex md:items-center md:w-auto`}
           >
-            <ul className="flex flex-col mt-16 space-y-4 md:mt-0 md:flex-row md:space-y-0 md:space-x-4">
+            <ul className="flex flex-col mt-16 space-y-4 md:-mt-[15px] md:flex-row md:space-y-0 md:space-x-4">
               {navLinks.map((link) => (
                 <li key={link.name} className="pl-2 pt-6 text-[0.9rem] font-bold ">
                   <Link to={link.path} className="hover:underline" onClick={handleLinkClick}>
@@ -65,8 +65,13 @@ function Header() {
             </ul>
           </nav>
         )}
-        <img src={logo} alt="logo" />
-        <img src={search} alt="search icon" className="w-8 h-8" />
+        <Link to={"/"}><img src={logo} alt="logo" className=" h-[8rem] -ml-18" /></Link>
+
+        <div className={` p-2 flex items-center gap-4 justify-end ${isTablet ? "w-[15rem]" : ""}`}>
+          <span className='text-white'>English</span>
+          <img src={downArrow} alt="" className=' w-4 h-4'/>
+        </div>
+
       </div>
       <div className="h-[1px] bg-grey"></div>
 
@@ -78,7 +83,7 @@ function Header() {
         >
           <ul className="flex flex-col mt-16 space-y-4 md:mt-0 md:flex-row md:space-y-0 md:space-x-4">
             {navLinks.map((link) => (
-              <li key={link.name} className="pl-10 pt-6 text-[1.8rem] font-bold ">
+              <li key={link.name} className=" hover:bg-[#333333] pl-10 pt-6 text-[1.8rem] font-bold ">
                 <Link to={link.path} className="hover:underline" onClick={handleLinkClick}>
                   {link.name}
                 </Link>
