@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("//cdn.web-fonts.ge/fonts/bpg-mikheil-stefane/css/bpg-mikheil-stefane.min.css");
+@import url("//cdn.web-fonts.ge/fonts/alk-tall-mtavruli/css/alk-tall-mtavruli.min.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body{
+  font-family: "BPG Mikheil Stefane", sans-serif;
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+.font-righteous {
+  font-family: "Righteous", sans-serif;
+}
 
+.font-mikheil {
+  font-family: "BPG Mikheil Stefane", sans-serif;
+}
+
+.font-alik{
+  font-family: "ALK Tall Mtavruli", sans-serif;
+}
 
 
 

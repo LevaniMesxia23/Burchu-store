@@ -45,7 +45,7 @@ function Header() {
   ];
 
   return (
-    <header className="w-full bg-black text-white">
+    <header className={`${i18n.language === "en" ? "font-righteous" : "font-mikheil"} w-full bg-black text-white `}>
       <div className="flex items-center justify-between px-8 py-4">
         <div className="flex items-center justify-start gap-4">
           {!isTablet && (

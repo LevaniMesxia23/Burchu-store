@@ -5,14 +5,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function Products() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   return (
-    <div className='bg-gray-100 text-gray-900 grid gap-8 p-8 min-h-screen grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
+    <div className={`${i18n.language === "en" ? "font-righteous" : "font-mikheil"} bg-gray-100 text-gray-900 grid gap-8 p-8 min-h-screen grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`}>
       {data.product.map((item, index) => (
         <div
           key={index}
