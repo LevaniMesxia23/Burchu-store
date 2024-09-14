@@ -34,7 +34,7 @@ export default function Footer() {
   };
 
   return (
-    <div className=' bg-black'>
+    <div className=' bg-black font-mikheil'>
       <div className=' px-12 py-8'>
         <ul className=' flex flex-col  text-white'>
           <div className=' flex justify-between items-center' onClick={toggleDropdown}>

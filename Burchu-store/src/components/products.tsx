@@ -34,7 +34,7 @@ function Products() {
      
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {filteredProducts.map((item, index) => (
-          <Link to={`/product/${item.id}`}>
+          <Link key={index} to={`/product/${item.id}`}>
           <div
             key={index}
             className='flex flex-col items-center bg-white rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300'

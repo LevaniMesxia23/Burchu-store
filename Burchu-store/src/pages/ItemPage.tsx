@@ -51,7 +51,7 @@ const ItemPage = () => {
           <div className="flex flex-col justify-center p-6 bg-white rounded-lg shadow-lg">
             <h1 className="text-4xl font-bold mb-4">{t(product.nameKey)}</h1>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <p className="text-2xl font-semibold">${product.cost}</p>
+              <p className="text-2xl font-semibold">₾{product.cost}</p>
             </div>
 
             <div className="flex items-center justify-between mb-4 cursor-pointer" onClick={() => setClickSize(!clickSize)}>
@@ -63,7 +63,7 @@ const ItemPage = () => {
               />
             </div>
             <div className={`overflow-hidden transition-max-height duration-500 ${clickSize ? 'max-h-96' : 'max-h-0'}`}>
-              <img src={SizeImg} alt="Size Chart" className="w-full" />
+              <img src={SizeImg} alt="Size Chart" className="w-full mb-8" />
             </div>
 
             <div className="flex items-center justify-between cursor-pointer" onClick={() => setClickDetails(!clickDetails)}>
@@ -75,7 +75,7 @@ const ItemPage = () => {
               />
             </div>
             <div className={`overflow-hidden transition-max-height duration-500 ${clickDetails ? 'max-h-96' : 'max-h-0'}`}>
-              <p className="text-gray-700 text-lg font-bold">
+              <p className="text-gray-700 text-lg font-bold mt-2">
                 • 230 GSM <br />
                 • 100% COMBED COTTON <br />
                 • PUFF PRINT DESIGN
