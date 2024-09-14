@@ -9,9 +9,10 @@ export const Mycontext = createContext<MyContextType | null>(null)
 function App() {
   const isTablet = useMediaQuery('(min-width: 768px)');
   const [ burgerClicked, setBurgerClicked ] = useState(false)
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
-    <Mycontext.Provider value={{burgerClicked, setBurgerClicked, isTablet}}>
+    <Mycontext.Provider value={{burgerClicked, setBurgerClicked,isDropdownOpen,setDropdownOpen, isTablet}}>
     <BrowserRouter>
         <Header />
       <Routes>
