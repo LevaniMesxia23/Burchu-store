@@ -4,8 +4,11 @@ import logo from "../../public/images/logo.jpg";
 import downArrow from "../../public/images/down-arrow.png";
 import { Mycontext } from "../App";
 import { Fade as Hamburger } from 'hamburger-react';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+  const { t, i18n } = useTranslation(); 
+
   const context = useContext(Mycontext);
   if (!context) {
     throw new Error("Header must be used within a MyContext.Provider");
@@ -34,12 +37,16 @@ function Header() {
   }, [burgerClicked]);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Products", path: "/products" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
+    { name: t('home'), path: "/" },
+    { name: t('products'), path: "/products" },
+    { name: t('about'), path: "/about" },
+    { name: t('contact'), path: "/contact" },
   ];
 
+  const changeLanguage = (lng: string | undefined) => {
+    i18n.changeLanguage(lng);
+    setDropdownOpen(false);
+  };
   return (
     <div>
       <div className="flex justify-between items-center bg-black w-full px-16">
@@ -71,12 +78,12 @@ function Header() {
         <Link to={"/"}><img src={logo} alt="logo" className=" h-[8rem] -ml-18" /></Link>
 
         <div className="relative p-2 flex items-center gap-4 justify-end" onClick={toggleDropdown}>
-          <span className='text-white'>English</span>
+        <span className='text-white'>{i18n.language === 'en' ? 'English' : 'ქართული'}</span>
           <img src={downArrow} alt="down arrow" className='w-4 h-4 cursor-pointer'  />
           
           <div className={`absolute top-full mt-2 bg-white shadow-lg rounded-lg p-2 transition-all duration-300 ease-in-out overflow-hidden ${isDropdownOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
-            <div className="cursor-pointer p-2 hover:bg-gray-200">English</div>
-            <div className="cursor-pointer p-2 hover:bg-gray-200">ქართული</div>
+          <div className="cursor-pointer p-2 hover:bg-gray-200" onClick={() => changeLanguage('en')}>{t('english')}</div>
+          <div className="cursor-pointer p-2 hover:bg-gray-200" onClick={() => changeLanguage('ka')}>{t('georgian')}</div>
           </div>
         </div>
 

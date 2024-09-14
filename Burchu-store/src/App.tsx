@@ -7,6 +7,7 @@ import ProductsPage from "./pages/ProductsPage"
 
 export const Mycontext = createContext<MyContextType | null>(null)
 function App() {
+  
   const isTablet = useMediaQuery('(min-width: 768px)');
   const [ burgerClicked, setBurgerClicked ] = useState(false)
   const [isDropdownOpen, setDropdownOpen] = useState(false);
