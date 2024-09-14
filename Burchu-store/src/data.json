@@ -4,7 +4,7 @@
       "id": 1,
       "nameKey": "messiTShirt",
       "image": "../public/images/messiImg.png",
-      "size": "m",
+      "description": "This is a high-quality football shirt made from 100% cotton.",
       "cost": 79,
       "quantity": 10
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "nameKey": "cristianoTshirt",
       "image": "../public/images/ronaldoImg.png",
-      "size": "m",
+      "description": "This is a high-quality football shirt made from 100% cotton.",
       "cost": 79,
       "quantity": 10
     },
@@ -20,7 +20,7 @@
       "id": 2,
       "nameKey": "cristianoTshirt",
       "image": "../public/images/ronaldoImg.png",
-      "size": "m",
+      "description": "This is a high-quality football shirt made from 100% cotton.",
       "cost": 79,
       "quantity": 10
     },
@@ -28,7 +28,7 @@
       "id": 2,
       "nameKey": "cristianoTshirt",
       "image": "../public/images/ronaldoImg.png",
-      "size": "m",
+      "description": "This is a high-quality football shirt made from 100% cotton.",
       "cost": 79,
       "quantity": 10
     },
@@ -36,7 +36,7 @@
       "id": 1,
       "nameKey": "messiTShirt",
       "image": "../public/images/messiImg.png",
-      "size": "m",
+      "description": "This is a high-quality football shirt made from 100% cotton.",
       "cost": 79,
       "quantity": 10
     },
@@ -44,7 +44,7 @@
       "id": 2,
       "nameKey": "cristianoTshirt",
       "image": "../public/images/ronaldoImg.png",
-      "size": "m",
+      "description": "This is a high-quality football shirt made from 100% cotton.",
       "cost": 79,
       "quantity": 10
     },
@@ -52,7 +52,7 @@
       "id": 2,
       "nameKey": "cristianoTshirt",
       "image": "../public/images/ronaldoImg.png",
-      "size": "m",
+      "description": "This is a high-quality football shirt made from 100% cotton.",
       "cost": 79,
       "quantity": 10
     },
@@ -60,7 +60,7 @@
       "id": 2,
       "nameKey": "cristianoTshirt",
       "image": "../public/images/ronaldoImg.png",
-      "size": "m",
+      "description": "This is a high-quality football shirt made from 100% cotton.",
       "cost": 79,
       "quantity": 10
     }

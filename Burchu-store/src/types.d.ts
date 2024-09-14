@@ -11,7 +11,7 @@ interface MyContextType {
     id: number;
     nameKey: string;
     image: string;
-    size: string;
+    description: string;
     cost: number;
     quantity: number;
   }[];
@@ -19,7 +19,7 @@ interface MyContextType {
     id: number;
     nameKey: string;
     image: string;
-    size: string;
+    description: string;
     cost: number;
     quantity: number;
   }[]>>;
@@ -29,7 +29,7 @@ interface MyContextType {
     id: number;
     nameKey: string;
     image: string;
-    size: string;
+    description: string;
     cost: number;
     quantity: number;
 }[]

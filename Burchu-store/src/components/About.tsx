@@ -1,6 +1,5 @@
 import { useContext, useEffect } from 'react';
 import zidane from '../../public/images/zidane.jpeg'; 
-
 import Footer from './Footer';
 import AOS from 'aos';
 import { Mycontext } from '../App';
