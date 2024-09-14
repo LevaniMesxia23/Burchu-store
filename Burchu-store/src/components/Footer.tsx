@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import plus from "../../public/images/plus.png"
 import minus from "../../public/images/minus-sign.png"
 import instagram from "../../public/images/icon-instagram.svg"
@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Mycontext } from '../App';
 
 export default function Footer() {
-  const { t, i18n } = useTranslation(); 
+  const { t } = useTranslation(); 
   const [menuOpen, setMenuOpen] = useState(false)
   const [feedbackOpen, setFeedbackOpen] = useState(false)
   const [socialOpen, setSocialOpen] = useState(false)
@@ -15,7 +15,6 @@ export default function Footer() {
   if (!context) {
     throw new Error("Header must be used within a MyContext.Provider");
   }
-  const {  changeLanguage } = context;
 
   const toggleDropdown = () => {
     setMenuOpen(!menuOpen);

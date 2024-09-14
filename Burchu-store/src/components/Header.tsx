@@ -7,7 +7,7 @@ import { Fade as Hamburger } from 'hamburger-react';
 import { useTranslation } from 'react-i18next';
 
 function Header() {
-  const { t, i18n } = useTranslation(); 
+  const { t, i18n } = useTranslation();
 
   const context = useContext(Mycontext);
   if (!context) {
@@ -18,6 +18,7 @@ function Header() {
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
+
   const handleBurger = () => {
     setBurgerClicked(!burgerClicked);
   };
@@ -44,57 +45,52 @@ function Header() {
   ];
 
   return (
-    <div>
-      <div className="flex justify-between items-center bg-black w-full px-16">
-        {!isTablet && (
-          <Hamburger
-            toggled={burgerClicked}
-            toggle={handleBurger}
-            size={24}
-            color="white"
-          />
-        )}
-        {isTablet && (
-          <nav
-            className={`fixed top-0 left-0 h-full w-[60%] bg-black text-white transition-transform duration-300 ease-in-out ${
-              burgerClicked ? "translate-x-0" : "-translate-x-full"
-            } md:relative md:translate-x-0 md:flex md:items-center md:w-auto`}
-          >
-            <ul className="flex flex-col mt-16 space-y-4 md:-mt-[15px] md:flex-row md:space-y-0 md:space-x-4">
-              {navLinks.map((link) => (
-                <li key={link.name} className="pl-2 pt-6 text-[0.9rem] font-bold ">
-                  <Link to={link.path} className="hover:underline" onClick={handleLinkClick}>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
-        <Link to={"/"}><img src={logo} alt="logo" className=" h-[8rem] -ml-18" /></Link>
-
-        <div className="relative p-2 flex items-center gap-4 justify-end" onClick={toggleDropdown}>
-        <span className='text-white'>{i18n.language === 'en' ? 'English' : 'ქართული'}</span>
-          <img src={downArrow} alt="down arrow" className='w-4 h-4 cursor-pointer'  />
-          
-          <div className={`absolute top-full mt-2 bg-white shadow-lg rounded-lg p-2 transition-all duration-300 ease-in-out overflow-hidden ${isDropdownOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
-          <div className="cursor-pointer p-2 hover:bg-gray-200" onClick={() => changeLanguage('en')}>{t('english')}</div>
-          <div className="cursor-pointer p-2 hover:bg-gray-200" onClick={() => changeLanguage('ka')}>{t('georgian')}</div>
-          </div>
+    <header className="w-full bg-black text-white">
+      <div className="flex items-center justify-between px-8 py-4">
+        <div className="flex items-center justify-start gap-4">
+          {!isTablet && (
+            <Hamburger
+              toggled={burgerClicked}
+              toggle={handleBurger}
+              size={24}
+              color="white"
+            />
+          )}
+          <Link to="/" className="flex-shrink-0">
+            <img src={logo} alt="logo" className="h-20" />
+          </Link>
         </div>
 
+        <div className="flex items-center gap-4">
+          {isTablet && (
+            <nav className="hidden md:flex space-x-4">
+              {navLinks.map((link) => (
+                <Link key={link.name} to={link.path} className="text-[0.9rem] font-bold" onClick={handleLinkClick}>
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+          )}
+          <div className="relative" onClick={toggleDropdown}>
+            <span className='text-white cursor-pointer'>{i18n.language === 'en' ? 'English' : 'ქართული'}</span>
+            <img src={downArrow} alt="down arrow" className='w-4 h-4 cursor-pointer ml-2 inline-block' />
+            <div className={`absolute top-full mt-4 bg-transparent border -ml-4 shadow-lg rounded-lg p-2 transition-all duration-300 ease-in-out overflow-hidden ${isDropdownOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
+          <div className="cursor-pointer p-2 hover:bg-gray-200 rounded-lg" onClick={() => changeLanguage('en')}>{t('english')}</div>
+          <div className="cursor-pointer p-2 hover:bg-gray-200 rounded-lg" onClick={() => changeLanguage('ka')}>{t('georgian')}</div>
+          </div>
+          </div>
+        </div>
       </div>
-      <div className="h-[1px] bg-grey"></div>
 
       {!isTablet && (
         <nav
-          className={`fixed top-279 left-0 h-full w-full bg-black text-white transition-transform duration-300 ease-in-out ${
+          className={`fixed top-[128px] left-0 h-full w-[100%] bg-black text-white transition-transform duration-300 ease-in-out ${
             burgerClicked ? "translate-x-0" : "-translate-x-full"
           } md:relative md:translate-x-0 md:flex md:items-center md:w-auto`}
         >
-          <ul className="flex flex-col mt-16 space-y-4 md:mt-0 md:flex-row md:space-y-0 md:space-x-4">
+          <ul className="flex flex-col  space-y-4 md:mt-0 md:flex-row md:space-y-0 md:space-x-4">
             {navLinks.map((link) => (
-              <li key={link.name} className=" hover:bg-[#333333] pl-10 pt-6 text-[1.8rem] font-bold ">
+              <li key={link.name} className="hover:bg-[#333333] pl-10 pt-6 text-[1.8rem] font-bold">
                 <Link to={link.path} className="hover:underline" onClick={handleLinkClick}>
                   {link.name}
                 </Link>
@@ -103,7 +99,7 @@ function Header() {
           </ul>
         </nav>
       )}
-    </div>
+    </header>
   );
 }
 
