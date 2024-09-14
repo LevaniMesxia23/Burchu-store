@@ -4,4 +4,5 @@ interface MyContextType {
   isTablet: boolean;
   isDropdownOpen: boolean;
   setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  changeLanguage: (lng: string) => void;
 }

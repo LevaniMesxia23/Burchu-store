@@ -1,8 +1,13 @@
 {
   "home": "Home",
+  "menu": "MENU",
   "products": "Products",
   "about": "About",
+  "feedback": "Feedback",
+  "socials": "Socials",
   "contact": "Contact",
+  "contact_info": "Contact Info",
+  "about_us": "About Us",
   "english": "English",
   "georgian": "ქართული"
 }

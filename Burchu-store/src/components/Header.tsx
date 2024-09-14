@@ -13,7 +13,7 @@ function Header() {
   if (!context) {
     throw new Error("Header must be used within a MyContext.Provider");
   }
-  const { burgerClicked, setBurgerClicked, isTablet, isDropdownOpen, setDropdownOpen } = context;
+  const { burgerClicked, setBurgerClicked, isTablet, isDropdownOpen, setDropdownOpen, changeLanguage } = context;
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -43,10 +43,6 @@ function Header() {
     { name: t('contact'), path: "/contact" },
   ];
 
-  const changeLanguage = (lng: string | undefined) => {
-    i18n.changeLanguage(lng);
-    setDropdownOpen(false);
-  };
   return (
     <div>
       <div className="flex justify-between items-center bg-black w-full px-16">

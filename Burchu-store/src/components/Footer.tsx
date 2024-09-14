@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import plus from "../../public/images/plus.png"
 import minus from "../../public/images/minus-sign.png"
 import instagram from "../../public/images/icon-instagram.svg"
+import { useTranslation } from 'react-i18next';
+import { Mycontext } from '../App';
 
 export default function Footer() {
+  const { t, i18n } = useTranslation(); 
   const [menuOpen, setMenuOpen] = useState(false)
   const [feedbackOpen, setFeedbackOpen] = useState(false)
   const [socialOpen, setSocialOpen] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
+  const context = useContext(Mycontext);
+  if (!context) {
+    throw new Error("Header must be used within a MyContext.Provider");
+  }
+  const {  changeLanguage } = context;
 
   const toggleDropdown = () => {
     setMenuOpen(!menuOpen);
@@ -30,25 +38,25 @@ export default function Footer() {
       <div className=' px-12 py-8'>
         <ul className=' flex flex-col gap-4 text-white'>
           <div className=' flex justify-between items-center' onClick={toggleDropdown}>
-            <li>MENU</li>
+            <li>{t("menu")}</li>
             <img className='w-2 h-2' src={menuOpen ? minus : plus} alt="" />
           </div>
           <div className={`flex flex-col gap-3 top-full  p-2 transition-all duration-300 ease-in-out overflow-hidden ${menuOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
-            <p>Home</p>
-            <p>Products</p>
-            <p>About Us</p>
+            <p>{t('home')}</p>
+            <p>{t('products')}</p>
+            <p>{t('about_us')}</p>
           </div>
           
           <div className=' flex justify-between items-center' onClick={toggleFeedback}>
-            <li>FEEDBACK</li>
+            <li>{t("feedback")}</li>
             <img className='w-2 h-2' src={feedbackOpen ? minus : plus} alt="" />
           </div>
           <div className={`flex flex-col gap-3 top-full  p-2 transition-all duration-300 ease-in-out overflow-hidden ${feedbackOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
-            <p>Contact</p>
+            <p>{t("contact")}</p>
           </div>
           
           <div className=' flex justify-between items-center' onClick={toggleSocial}>
-            <li>SOCIALS</li>
+            <li>{t("socials")}</li>
             <img className='w-2 h-2' src={socialOpen ? minus : plus} alt="" />
           </div>
           <div className={`flex flex-col gap-3 top-full  p-2 transition-all duration-300 ease-in-out overflow-hidden ${socialOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
@@ -56,7 +64,7 @@ export default function Footer() {
           </div>
 
           <div className=' flex justify-between items-center' onClick={toggleContacts}>
-            <li>CONTACT INFO</li>
+            <li>{t('contact_info')}</li>
             <img className='w-2 h-2' src={contactOpen ? minus : plus} alt="" />
           </div>
           <div className={`flex flex-col gap-3 top-full  p-2 transition-all duration-300 ease-in-out overflow-hidden ${contactOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
