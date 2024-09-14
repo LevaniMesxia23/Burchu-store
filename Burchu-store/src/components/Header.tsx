@@ -71,14 +71,14 @@ function Header() {
         <Link to={"/"}><img src={logo} alt="logo" className=" h-[8rem] -ml-18" /></Link>
 
         <div className="relative p-2 flex items-center gap-4 justify-end" onClick={toggleDropdown}>
-  <span className='text-white'>English</span>
-  <img src={downArrow} alt="down arrow" className='w-4 h-4 cursor-pointer'  />
-  
-  <div className={`absolute top-full mt-2 bg-white shadow-lg rounded-lg p-2 transition-all duration-300 ease-in-out overflow-hidden ${isDropdownOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
-    <div className="cursor-pointer p-2 hover:bg-gray-200">English</div>
-    <div className="cursor-pointer p-2 hover:bg-gray-200">ქართული</div>
-  </div>
-</div>
+          <span className='text-white'>English</span>
+          <img src={downArrow} alt="down arrow" className='w-4 h-4 cursor-pointer'  />
+          
+          <div className={`absolute top-full mt-2 bg-white shadow-lg rounded-lg p-2 transition-all duration-300 ease-in-out overflow-hidden ${isDropdownOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
+            <div className="cursor-pointer p-2 hover:bg-gray-200">English</div>
+            <div className="cursor-pointer p-2 hover:bg-gray-200">ქართული</div>
+          </div>
+        </div>
 
       </div>
       <div className="h-[1px] bg-grey"></div>
