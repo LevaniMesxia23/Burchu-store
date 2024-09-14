@@ -84,7 +84,7 @@ function Header() {
 
       {!isTablet && (
         <nav
-          className={`fixed top-[128px] left-0 h-full w-[100%] bg-black text-white transition-transform duration-300 ease-in-out ${
+          className={`fixed top-[113px] left-0 h-full w-[100%] bg-black text-white transition-transform duration-300 ease-in-out ${
             burgerClicked ? "translate-x-0" : "-translate-x-full"
           } md:relative md:translate-x-0 md:flex md:items-center md:w-auto`}
         >
