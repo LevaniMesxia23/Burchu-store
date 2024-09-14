@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import MainImg from "../../public/images/focus.jpg";
-import MessiWide from "../../public/images/_.jpeg";
+
 import { Mycontext } from "../App";
 import Footer from "../components/Footer";
 import Products from "../components/Products";
 import { useTranslation } from 'react-i18next';
+import papi from '../../public/images/papi.jpeg';
 
 
 function HomePage() {
@@ -21,8 +22,8 @@ function HomePage() {
         <img src={MainImg} className=" w-full" alt="" />
       ) : (
         <img
-          src={MessiWide}
-          className=" flex justify-center items-center w-full"
+          src={papi}
+          className=" flex justify-center items-center w-full h-[620px]"
           alt=""
         />
       )}

@@ -4,9 +4,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Mycontext } from "../App";
 
-
 function Products() {
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);  
+  }, []);
 
   const context = useContext(Mycontext);
   if (!context) {
