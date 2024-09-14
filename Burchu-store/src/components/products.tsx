@@ -22,7 +22,7 @@ function Products() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
     setFilteredProducts(result);
-  }, [input, result, setFilteredProducts, sortOption]);
+  }, [input, setFilteredProducts, sortOption]);
     
 
   return (

@@ -30,7 +30,7 @@ function FilterSort() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
     setFilteredProducts(result);
-  }, [input, result, setFilteredProducts, sortOption]);
+  }, [input, setFilteredProducts, sortOption]);
 
 const handleChange = (value: SetStateAction<string>) => {
   setInput(value);
