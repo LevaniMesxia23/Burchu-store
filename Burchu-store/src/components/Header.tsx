@@ -74,7 +74,7 @@ function Header() {
           <div className="relative" onClick={toggleDropdown}>
             <span className='text-white cursor-pointer'>{i18n.language === 'en' ? 'English' : 'ქართული'}</span>
             <img src={downArrow} alt="down arrow" className='w-4 h-4 cursor-pointer ml-2 inline-block' />
-            <div className={`absolute top-full mt-4 bg-transparent border -ml-4 shadow-lg rounded-lg p-2 transition-all duration-300 ease-in-out overflow-hidden ${isDropdownOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
+            <div className={`z-20 absolute top-full mt-4 bg-transparent border -ml-4 shadow-lg rounded-lg p-2 transition-all duration-300 ease-in-out overflow-hidden ${isDropdownOpen ? "max-h-40 opacity-100 visible" : "max-h-0 opacity-0 invisible"}`}>
           <div className="cursor-pointer p-2 hover:bg-gray-200 rounded-lg" onClick={() => changeLanguage('en')}>{t('english')}</div>
           <div className="cursor-pointer p-2 hover:bg-gray-200 rounded-lg" onClick={() => changeLanguage('ka')}>{t('georgian')}</div>
           </div>
@@ -84,7 +84,7 @@ function Header() {
 
       {!isTablet && (
         <nav
-          className={`fixed top-[113px] left-0 h-full w-[100%] bg-black text-white transition-transform duration-300 ease-in-out ${
+          className={`z-10 fixed top-[113px] left-0 h-full w-[100%] bg-black text-white transition-transform duration-300 ease-in-out ${
             burgerClicked ? "translate-x-0" : "-translate-x-full"
           } md:relative md:translate-x-0 md:flex md:items-center md:w-auto`}
         >
